@@ -1,0 +1,2 @@
+var CustomErrors=function(r){"use strict";class t extends Error{constructor(r){if(super(r),"function"==typeof Error.captureStackTrace)Error.captureStackTrace(this,this.constructor);else{const t=new Error(r);this.stack=t.stack}}}return r.CustomError=t,r.createCustomError=r=>class extends t{constructor(t){super(t),this.name=r}},Object.defineProperty(r,"__esModule",{value:!0}),r}({});
+//# sourceMappingURL=custom-errors.iife.js.map
