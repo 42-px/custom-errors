@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});class r extends Error{constructor(r){if(super(r),"function"==typeof Error.captureStackTrace)Error.captureStackTrace(this,this.constructor);else{const t=new Error(r);this.stack=t.stack}}}exports.CustomError=r,exports.createCustomError=t=>class extends r{constructor(r){super(r),this.name=t}};
+//# sourceMappingURL=custom-errors.cjs.js.map
