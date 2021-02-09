@@ -6,5 +6,8 @@ interface CustomErrorInterface {
     message?: string;
     stack?: string;
 }
-export declare const createCustomError: (errorName: string) => CustomErrorInterface;
+interface CustomErrorConstructor {
+    new (message?: string): CustomErrorInterface;
+}
+export declare const createCustomError: (errorName: string) => CustomErrorConstructor;
 export {};
