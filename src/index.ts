@@ -12,11 +12,18 @@ export class CustomError extends Error {
     }
 }
 
-export const createCustomError = (errorName: string) => {
-    return class MyCustomError extends CustomError {
+interface CustomErrorInterface {
+    name: string
+    message?: string
+    stack?: string
+}
+
+export const createCustomError = (errorName: string): CustomErrorInterface => {
+    class MyCustomError extends CustomError implements CustomErrorInterface {
         constructor(message?: string) {
             super(message)
             this.name = errorName
         }
     }
+    return MyCustomError
 }
