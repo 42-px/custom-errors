@@ -18,7 +18,13 @@ interface CustomErrorInterface {
     stack?: string
 }
 
-export const createCustomError = (errorName: string): CustomErrorInterface => {
+interface CustomErrorConstructor {
+    new(message?: string): CustomErrorInterface
+}
+
+export const createCustomError = (
+    errorName: string
+): CustomErrorConstructor => {
     class MyCustomError extends CustomError implements CustomErrorInterface {
         constructor(message?: string) {
             super(message)
