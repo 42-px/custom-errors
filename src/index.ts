@@ -12,7 +12,7 @@ export class CustomError extends Error {
     }
 }
 
-interface CustomErrorInterface {
+export interface CustomErrorInterface {
     name: string
     message?: string
     stack?: string

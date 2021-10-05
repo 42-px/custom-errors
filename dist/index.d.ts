@@ -1,7 +1,7 @@
 export declare class CustomError extends Error {
     constructor(message?: string);
 }
-interface CustomErrorInterface {
+export interface CustomErrorInterface {
     name: string;
     message?: string;
     stack?: string;
