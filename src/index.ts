@@ -18,7 +18,7 @@ export interface CustomErrorInterface {
     stack?: string
 }
 
-interface CustomErrorConstructor {
+export interface CustomErrorConstructor {
     new(message?: string): CustomErrorInterface
 }
 
