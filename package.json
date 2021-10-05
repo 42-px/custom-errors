@@ -1,6 +1,6 @@
 {
     "name": "@42px/custom-errors",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "helpful custom errors",
     "main": "./dist/custom-errors.cjs.js",
     "jsnext:main": "./dist/index.js",
