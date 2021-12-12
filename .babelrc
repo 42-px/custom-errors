@@ -1,41 +1,24 @@
 {
     "presets": [
+        "@babel/preset-typescript",
         [
             "@babel/preset-env",
             {
-                "modules": false
-            }
-        ]
-    ],
-    "plugins": [
-        "@babel/plugin-proposal-optional-chaining",
-        [
-            "module-resolver",
-            {
-                "alias": {
-                    "@": "./src"
+                "useBuiltIns": "entry",
+                "shippedProposals": true,
+                "corejs": 3,
+                "modules": false,
+                "targets": {
+                    "node": "current",
+                    "chrome": "70"
                 }
             }
         ]
     ],
     "env": {
         "test": {
-            "presets": [
-                "@babel/preset-typescript"
-            ],
             "plugins": [
-                "@babel/plugin-transform-modules-commonjs",
-                [
-                    "@babel/plugin-transform-runtime",
-                    {
-                        "regenerator": true
-                    }
-                ],
-            ]
-        },
-        "development": {
-            "presets": [
-                "@babel/preset-typescript"
+                "@babel/plugin-transform-modules-commonjs"
             ]
         }
     }
