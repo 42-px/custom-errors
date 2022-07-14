@@ -17,7 +17,8 @@
         "build:bundle": "rollup -c rollup.config.js",
         "build": "npm run emit-dts && npm run build:bundle",
         "lint": "eslint \"./**/*.{js,ts,tsx}\"",
-        "lint:fix": "eslint \"./**/*.{js,ts,tsx}\" --fix"
+        "lint:fix": "eslint \"./**/*.{js,ts,tsx}\" --fix",
+        "check:types": "tsc --noEmit"
     },
     "repository": {
         "type": "git",
@@ -48,7 +49,7 @@
         "eslint": "^8.4.1",
         "rollup": "^2.61.1",
         "rollup-plugin-terser": "^7.0.2",
-        "typescript": "^4.5.3"
+        "typescript": "^4.7.4"
     },
     "files": [
         "dist"
